@@ -85,3 +85,54 @@ print(cstring)
 Can convert a string to a list:
 list=cstring.split(', ') //gives list
 
+TUPLES: we cannot modify tuples-immutable
+
+courses=(‘a’,’b’,’c’)
+Cannot change values
+Can convert lists to tuples and vice versa tuple(), list()
+
+SETS:unordered and have no duplicates
+courses={‘a’,’b’,’c’}
+print(‘d’ in courses) //false - membership test of sets.
+
+courses={'a','b','c','a'}
+courses2={'a','d','e'}
+print(courses.intersection(courses2))  //common eles
+print(courses.difference(courses2))  // a-b
+print(courses.union(courses2)) //union
+
+To create : empty_list=[] OR list() //using list class
+empty_tuple=() OR tuple()
+empty_set=set()   // cannot use {} because that creates an empty dictionary
+All lists,tuples,sets are heterogeneous, can contain values with any datatype.
+
+Dictionaries: key-value pairs,key is the unique identifier.
+student={‘name’:’Ashna’,’age’:20,’courses’:[‘a’,’b’]}
+print(student[‘name’])
+Say we printed a key that does not exist, so it throws some error but we don't want that to happen, so using:
+print(student.get(‘name’)) //prints Ashna
+print(student.get(‘phone’)) //prints None
+Can also give default value
+print(student.get(‘phone’,’Not Found’)) //prints Not Found
+
+To insert values add directly: student[‘phone’]=’100’
+To update values: student[‘name’]=’ash’ //updates the dictionary
+
+If we want to update multiple values we can use update()
+student.update({‘name’:’sakshi’,’age’:15})  //updates the dictionary
+
+To delete a pair: del student[‘age’]
+Can use pop keyword student.pop(‘age’)
+
+To print out the number of eles : print(len(student))
+print(student.keys())  //all keys
+print(student.values())  //all values
+print(student.items()) // all key value pairs
+
+for key in student:
+	print(key)
+
+for key,value in student.items():
+	print(key,value)
+
+
